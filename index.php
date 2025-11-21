@@ -1,55 +1,38 @@
+<?php
+session_start();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $idInserito = $_POST['user_id'];
+
+    $utenti = json_decode(file_get_contents("utente.json"), true);
+
+    foreach ($utenti as $u) {
+        if ($u['id'] == $idInserito) {
+            $_SESSION['utente'] = $u;
+            $_SESSION['carrello'] = $_SESSION['carrello'] ?? [];
+            header("Location: oggetti.php");
+            exit;
+        }
+    }
+
+    $errore = "ID utente non valido";
+}
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="stile.css">
-    </head>
+    <link rel="stylesheet" href="stile.css">
+</head>
 <body>
-<div class="container">
-<h2>Calcolatrice</h2>
+<h2>Login Utente</h2>
 
-<form action="" method="post">
-  <label for="numero1">numero:</label><br>
-  <input type="number" id="numero1" name="numero1" value="" required><br>
-  <input type="button" value="+">
-  <input type="button" value="-">
-  <input type="button" value="*">
-  <input type="button" value="/">
-  <input type="submit" value="=">
-</form> 
-<div class="risultato">
-<?php
-     $risultato = "";  
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["numero1"]) && isset($_POST["operatore"])) {    
-        include 'somma.php';
-        include 'sottrazione.php';
-        include 'moltiplicazione.php';
-        include 'divisione.php';
+<form method="POST">
+    <label>ID Utente:</label>
+    <input type="number" name="user_id" required>
+    <button type="submit">Entra</button>
+</form>
 
-
-    $numero1 = $_POST["numero1"];
-    $risultato = $_POST["risultato"];
-    $operatore = $_POST["operatore"];
-    switch ($operatore) {
-    case 'somma':
-        $risultato = somma($numero1,$risultato);
-        break;
-    case 'sottrazione':
-        $risultato = sottrazione($numero1, $risultato);
-        break;
-    case 'moltiplicazione':
-        $risultato = moltiplicazione($numero1, $risultato);
-        break;
-    case 'divisione':
-        $risultato = divisione($numero1, $risultato);
-        break;
-    default:
-        $risultato = "Operatore non valido";
-}}}
-
-echo "<h3>Risultato: $risultato</h3>";
-?>
- 
-</div>
+<?php if (!empty($errore)) echo "<p style='color:red'>$errore</p>"; ?>
 </body>
 </html>

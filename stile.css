@@ -1,76 +1,110 @@
+/* Impostazioni generali */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #e0f7fa, #fff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
 }
 
+/* Contenitore principale */
+.container {
+    width: 400px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 50px auto;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+/* Titoli */
+h1, h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form */
 form {
-  background-color: #ffffff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-h2 {
-  text-align: center;
-  color: #00796b;
-  margin-bottom: 20px;
+input[type="text"],
+input[type="number"] {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-label {
-  display: block;
-  margin-top: 10px;
-  color: #333;
-  font-weight: bold;
+/* Pulsante */
+button {
+    padding: 10px;
+    background-color: #0066ff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-input[type="number"],
-select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
+button:hover {
+    background-color: #0044aa;
 }
 
-input[type="submit"] {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px;
-  background-color: #00796b;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+/* Link stile pulsante */
+a.button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-
-input[type="submit"]:hover {
-  background-color: #004d40;
-}
-input[type="button"] {
-  margin-top: 20px;
-  width: 100%;
-  padding: 10px;
-  background-color: #00796b;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
+a.button:hover {
+    background-color: #1e7e34;
 }
 
+/* Liste oggetti */
+ul {
+    list-style: none;
+    padding: 0;
+}
 
-input[type="button "]:hover {
-  background-color: #004d40;
+ul li {
+    background: #fafafa;
+    padding: 10px;
+    margin-bottom: 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Link aggiungi */
+.add-link {
+    color: #0066cc;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.add-link:hover {
+    text-decoration: underline;
+}
+
+/* Messaggi errore */
+.error {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+/* Carrello */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fafafa;
+    padding: 10px;
+    margin-bottom: 6px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
 }

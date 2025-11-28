@@ -1,0 +1,20 @@
+[
+    {
+        "id": "65b3f12ac9e8a",
+        "nome": "Mario",
+        "cognome": "Rossi",
+        "pass": "1234"
+    },
+    {
+        "id": "65b3f12ad112b",
+        "nome": "Luca",
+        "cognome": "Bianchi",
+        "pass": "abcd"
+    },
+    {
+        "id": "65b3f12ad6a11",
+        "nome": "Giulia",
+        "cognome": "Verdi",
+        "pass": "qwerty"
+    }
+]

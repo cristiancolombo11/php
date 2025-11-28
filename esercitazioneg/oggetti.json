@@ -1,0 +1,14 @@
+[
+  { "id": 1,  "nome": "Maschera Oakley Flight Deck" },
+  { "id": 2,  "nome": "iPhone 15 Pro" },
+  { "id": 3,  "nome": "MacBook Pro 14 M3" },
+  { "id": 4,  "nome": "Giacca Burton AK 3L Gore-Tex" },
+  { "id": 5,  "nome": "Pantaloni Burton AK Freebird" },
+  { "id": 6,  "nome": "Scarponi Salomon S/Pro 120" },
+  { "id": 7,  "nome": "Sci Atomic Redster S9 Revoshock" },
+  { "id": 8,  "nome": "Casco Smith Vantage MIPS" },
+  { "id": 9,  "nome": "Zaino Black Diamond JetForce Pro" },
+  { "id": 10, "nome": "Guanti Hestra Army Leather Heli" },
+  { "id": 11, "nome": "Zaino The North Face Borealis" },
+  { "id": 12, "nome": "Occhiali da sole Prada Linea Rossa" }
+]
